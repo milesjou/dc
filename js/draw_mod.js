@@ -30,38 +30,6 @@ $(function() {
     });
 
 
-    // Log API
-    // function sendLogToServer(log) {
-    //     fetch('/log', {
-    //         method: 'POST',
-    //         body: JSON.stringify(log),
-    //         headers: { 'Content-Type': 'application/json' }
-    //     });
-    // }
-
-    // function log(message) {
-    //     $.ajax({
-    //         url: "/log",
-    //         type: "POST",
-    //         data: {"message": message},
-    //         success: function() {
-    //             console.log("Log entry sent to server!");
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error("Error sending log entry:", error);
-    //         }
-    //     });
-    // }
-
-    function log(message) {
-        axios.post('/log', { message: message }).then(response => {
-            console.log("Log entry sent to server!");
-        }).catch(error => {
-            console.error("Error sending log entry:", error);
-        });
-    }
-
-
     // 定义卡池
     var result = $('#result'); // 显示结果的div元素
     var drawBtn = $('#btn_not_yes'); // 抽卡按钮
@@ -77,11 +45,6 @@ $(function() {
 
     var vd_player = $('#play_video')[0];
 
-    // $("#pool_prob").html(`
-    //     <p>SSR卡池：${ssr_prob.toFixed(2)}%</p>
-    //     <p>SR卡池：${sr_prob.toFixed(2)}%</p>
-    //     <p>R卡池：${r_prob.toFixed(2)}%</p>
-    // `);
 
     function updateProb() {
         let ssr_total_prob = ssr_pool.reduce((sum, card) => sum + card.prob, 0);
@@ -112,10 +75,6 @@ $(function() {
     }
 
     function play_vd(path) {
-        // vd_player.attr('src', path);
-        // vd_player.get(0).play();
-        // vd_player.play();
-        
         vd_player.src = path;
         vd_player.load();
 
@@ -135,13 +94,6 @@ $(function() {
 
     drawBtn.click(function() {
         var randomNum = Math.random();
-        // var randomNum = parseFloat(Math.random().toFixed(4));
-        // 生成一个0到1之间的随机数
-        // var card;
-        // 存储抽到的卡牌
-        
-        // 判断抽到的是哪种卡牌
-
         console.log(randomNum)
         
         
@@ -213,10 +165,6 @@ $(function() {
 
             $('.character_name').css('text-stroke', card_name);
         }
-
-        
-        // console.log(card)
-        // result.html('你抽到了：<br />' + previousResults.join('')); 
     });
 
     updateProb();
@@ -250,10 +198,6 @@ $(function() {
         $('.video_mask').removeClass("show");
         $('.video_1c').removeClass("show");
         $('.aper').addClass('show');
-
-        
-
-        log(card);
     });
 
 });
