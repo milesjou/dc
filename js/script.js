@@ -24,7 +24,7 @@ $(function() {
 
     console.log("jQuery 已工作中!");
 
-    $("#btn_10c, #btn_1c_02").click(function() {
+    $("#btn_10c, #btn_1c_02, #btn_not_yes").click(function() {
         $(".notice_dialog").addClass("show");
     });
 
