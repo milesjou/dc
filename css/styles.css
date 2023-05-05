@@ -779,7 +779,7 @@ video::-webkit-media-controls-play-button, video::-webkit-media-controls-fullscr
 
 .card_result.show {
   display: block;
-  z-index: 995;
+  z-index: 700;
 }
 
 .card_info {
