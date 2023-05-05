@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>デスチャ 10連</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/styles.css">
+	<script src="js/jquery-3.6.4.min.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/draw_mod.js"></script>
+
+</head>
+
+<body>
+  <div class="rect_screen">
+    <div class="bg"></div>
+    <div class="rect rect_header">
+      <div class="h_icon love">
+        <img src="img/icon_stamina.png">
+        <span>9,999 /128</span>
+      </div>
+      
+      <div class="h_icon gold">
+        <img src="img/icon_gem.png">
+        <span>9,999,999</span>
+      </div>
+
+      <div class="h_icon diamond">
+        <img src="img/icon_gold.png">
+        <span>9,999,999</span>
+      </div>
+
+      <div class="h_icon ruby">
+        <img src="img/icon_blood_gem.png">
+        <span>9,999</span>
+      </div>
+      <div class="header_line">
+        <img src="img/menu_line.png">
+      </div>
+
+      <div class="menu_bar">
+        <div class="menu_01"></div>
+      </div>
+      
+    </div>
+    
+    <div class="rect rect_main">
+      <!--div class="card_pool_01">
+        <div class="card_pool_content">
+          <img src="img/card_pool_001.png">
+        </div>
+        <div class="card_pool_btn_10c">
+          <img src="img/ten_con_bg.png">
+          <button id="btn_10c" class="btn_10c"></button>
+          <div class="red_stone_floating"></div>
+        </div>
+      </div>
+
+      <div class="card_pool_02">
+        <div class="card_pool_content">
+          <img src="img/card_pool_002.png">
+        </div>
+        <div class="card_pool_btn_10c">
+          <img src="img/ten_con_bg.png">
+          <button class="btn_10c"></button>
+          <div class="red_stone_floating"></div>
+        </div>
+      </div-->
+
+      <div class="card_pool_03">
+        <div class="card_pool_content">
+          <img src="img/card_pool_003.png">
+        </div>
+        <div class="card_pool_btn_1c">
+          <!--img src="img/one_con_bg.png"-->
+          <button class="btn_1c_01"></button>
+          <button id="btn_1c_02" class="btn_1c_02">
+            <span data-storke="1">1</span>
+            <span data-storke="次召唤">次召唤</span>
+            <span data-storke="190">190</span>
+            <span></span>
+          </button>
+
+          <div class="btn_1c_01_bg"></div>
+        </div>
+        <div class="o_rsf red_stone_floating"></div>
+      </div>
+    </div>
+    
+    <div class="rect rect_fooler"></div>
+
+    <div class="notice_dialog">
+      <div class="notice_content"></div>
+      <div id="btn_not_no" class="not_btn btn_not_no"></div>
+      <div id="btn_not_yes" class="not_btn btn_not_yes"></div>
+    </div>
+
+    <div class="video_bar">
+      <div class="video_mask"></div>
+      <video id="play_video" class="video_1c" width="488" height="865" preload="auto" controls="false" src="" autoplay muted></video>
+    </div>
+
+    <div class="card_result">
+      <div class="aper"></div>
+      <div class="character_body"></div>
+      <div class="character_avatar"></div>
+      <div class="character_stars"></div>
+      <div class="character_name"></div>
+      <div class="character_btn">
+        <div id="btn_not_no" class="not_btn btn_not_no"></div>
+        <div id="btn_not_yes" class="not_btn btn_not_yes"></div>
+      </div>  
+    </div>
+  </div>
+
+  <div class="body_bg">
+    <div class="trans_center"></div>
+    <div class="trans_right"></div>
+  </div>
+</body>
+</html>
